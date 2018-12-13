@@ -1,5 +1,5 @@
 import express from "express";
-import { graphiqlExpress, graphqlExpress, ApolloServer } from 'apollo-server-express';
+import { ApolloServer } from 'apollo-server-express';
 import mongoose from 'mongoose';
 //import { makeExecutableSchema } from 'graphql-tools';
 
@@ -22,9 +22,9 @@ const SERVER = new ApolloServer({
     typeDefs: typeDefs,
     resolvers: resolvers,
     playground: {
-        endpoint: `http://localhost:4000/graphql`,
+        endpoint: `http://localhost:3000/graphql`,
         settings: {
-            'editor.theme': 'light'
+            'editor.theme': 'dark',
         }
     }
 });
